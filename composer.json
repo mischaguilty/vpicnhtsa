@@ -1,0 +1,21 @@
+{
+    "name": "mischa/vpicnhtsa",
+    "description": "",
+    "authors": [
+        {
+            "name": "Mischa",
+            "email": "go.myke@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mischaguilty\\Vpicnhtsa\\VpicnhtsaServiceProvider"
+            ],
+            "aliases": [
+                "Mischaguilty\\Vpicnhtsa\\VpicnhtsaFasade"
+            ]
+        }
+    }
+}

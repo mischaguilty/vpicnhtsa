@@ -7,15 +7,5 @@
         }
     ],
     "description": "",
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Mischa\\Vpicnhtsa\\VpicnhtsaServiceProvider"
-            ],
-            "aliases": [
-                "Mischa\\Vpicnhtsa\\VpicnhtsaFasade"
-            ]
-        }
-    },
     "require": {}
 }

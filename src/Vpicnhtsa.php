@@ -1,6 +1,6 @@
 <?php
 
-namespace Mischaguilty\Vpicnhtsa;
+namespace Mischa\Vpicnhtsa;
 
 class Vpicnhtsa
 {

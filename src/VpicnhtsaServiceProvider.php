@@ -1,9 +1,9 @@
 <?php
 
-namespace Mischaguilty\Vpicnhtsa;
+namespace Mischa\Vpicnhtsa;
 
 use Illuminate\Support\ServiceProvider;
-use Mischaguilty\Vpicnhtsa\Console\SearchVinCommand;
+use Mischa\Vpicnhtsa\Console\SearchVinCommand;
 
 class VpicnhtsaServiceProvider extends ServiceProvider
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Mischaguilty\Vpicnhtsa\Tests;
+namespace Mischa\Vpicnhtsa\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Mischaguilty\Vpicnhtsa\VpicnhtsaServiceProvider;
+use Mischa\Vpicnhtsa\VpicnhtsaServiceProvider;
 
 class ExampleTest extends TestCase
 {
@@ -12,7 +12,7 @@ class ExampleTest extends TestCase
     {
         return [VpicnhtsaServiceProvider::class];
     }
-    
+
     /** @test */
     public function true_is_true()
     {

@@ -14,16 +14,8 @@ class SearchVinCommand extends Command
 
     protected $vin;
 
-    public function __construct(string $vin)
-    {
-        parent::__construct();
-        $this->vin = $vin;
-    }
-
     public function handle()
     {
-        optional($this->vin, function ($vin) {
-            dd($vin);
-        });
+        dd("!!!");
     }
 }

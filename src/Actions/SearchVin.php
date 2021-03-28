@@ -4,7 +4,6 @@ namespace Mischa\Vpicnhtsa\Actions;
 
 use Illuminate\Console\Command;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Router;
 use Lorisleiva\Actions\Concerns\AsAction;
 
@@ -35,6 +34,9 @@ class SearchVin
             CURLOPT_ENCODING => '',
             CURLOPT_USERAGENT => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0',
             CURLOPT_REFERER => 'https://vpic.nhtsa.dot.gov/api/',
+            CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_TIMEOUT => 20,
+            CURLOPT_MAXREDIRS => 10,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_2,
         ]);
         $response = curl_exec($curl);
@@ -64,6 +66,10 @@ class SearchVin
             CURLOPT_ENCODING => '',
             CURLOPT_USERAGENT => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0',
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_2,
+            CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_TIMEOUT => 20,
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_REFERER => 'https://exist.ua',
         ]);
         $response = curl_exec($curl);
         $info = curl_getinfo($curl);

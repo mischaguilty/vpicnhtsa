@@ -27,7 +27,7 @@
         "illuminate/contracts": "^8.0|^9.0",
         "illuminate/console": "^8.0|^9.0",
         "illuminate/support": "^8.0|^9.0",
-        "laravel/laravel": "^v8.5.15",
+        "laravel/laravel": "^v8.1.0",
         "lorisleiva/laravel-actions": "^v0.3.0",
         "ext-curl": "*",
         "ext-json": "*"

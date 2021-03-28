@@ -2,8 +2,9 @@
 
 namespace Mischa\Vpicnhtsa;
 
+use Mischa\Vpicnhtsa\Actions\SearchVin;
 use Illuminate\Support\ServiceProvider;
-use Mischa\Vpicnhtsa\Console\SearchVinCommand;
+use Lorisleiva\Actions\Facades\Actions;
 
 class VpicnhtsaServiceProvider extends ServiceProvider
 {
@@ -18,14 +19,17 @@ class VpicnhtsaServiceProvider extends ServiceProvider
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'vpicnhtsa');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
-        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'vpicnhtsa');
+        Actions::registerRoutesForAction(SearchVin::class);
+
+//        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
+
+//        $this->loadViewsFrom(__DIR__.'/../resources/views', 'vpicnhtsa');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('vpicnhtsa.php'),
-            ], 'config');
+//            $this->publishes([
+//                __DIR__.'/../config/config.php' => config_path('vpicnhtsa.php'),
+//            ], 'config');
 
             // Publishing the views.
             /*$this->publishes([
@@ -43,9 +47,9 @@ class VpicnhtsaServiceProvider extends ServiceProvider
             ], 'lang');*/
 
             // Registering package commands.
-             $this->commands([
-                 SearchVinCommand::class,
-             ]);
+            $this->commands([
+                SearchVin::class,
+            ]);
         }
     }
 
@@ -54,8 +58,8 @@ class VpicnhtsaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'vpicnhtsa');
+//        // Automatically apply the package configuration
+//        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'vpicnhtsa');
 
         // Register the main class to use with the facade
         $this->app->singleton('vpicnhtsa', function () {

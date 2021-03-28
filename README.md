@@ -18,6 +18,12 @@ composer require mischa/vpicnhtsa
 ## Usage
 
 ``` php
+http://127.0.0.1:8000/search/vin/SALLMAMA44A150851
+
+```bash
+php artisan search:vin SALLMAMA44A150851
+
+
 // Usage description here
 ```
 

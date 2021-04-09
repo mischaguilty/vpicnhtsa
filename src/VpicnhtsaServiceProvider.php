@@ -2,6 +2,7 @@
 
 namespace Mischa\Vpicnhtsa;
 
+use Mischa\Vpicnhtsa\Actions\SearchNumber;
 use Mischa\Vpicnhtsa\Actions\SearchVin;
 use Illuminate\Support\ServiceProvider;
 use Lorisleiva\Actions\Facades\Actions;
@@ -21,6 +22,7 @@ class VpicnhtsaServiceProvider extends ServiceProvider
 
 
         Actions::registerRoutesForAction(SearchVin::class);
+        Actions::registerRoutesForAction(SearchNumber::class);
 
 //        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
@@ -49,6 +51,7 @@ class VpicnhtsaServiceProvider extends ServiceProvider
             // Registering package commands.
             $this->commands([
                 SearchVin::class,
+                SearchNumber::class,
             ]);
         }
     }

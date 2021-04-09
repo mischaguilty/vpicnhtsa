@@ -57,8 +57,6 @@ class BaseCommand extends Command
 
     public function getResponse(string $url): string
     {
-//        dd($url);
-
         $curl = curl_init($url);
         curl_setopt_array($curl, [
             CURLOPT_RETURNTRANSFER => true,

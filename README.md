@@ -5,7 +5,8 @@
 [![Quality Score](https://img.shields.io/scrutinizer/g/mischaguilty/vpicnhtsa.svg?style=flat-square)](https://scrutinizer-ci.com/g/mischaguilty/vpicnhtsa)
 [![Total Downloads](https://img.shields.io/packagist/dt/mischaguilty/vpicnhtsa.svg?style=flat-square)](https://packagist.org/packages/mischaguilty/vpicnhtsa)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+Now with number search with possible vin results;
+Number search doesnt depend on case or cyrillic symbols;
 
 ## Installation
 
@@ -19,9 +20,11 @@ composer require mischa/vpicnhtsa
 
 ``` php
 http://127.0.0.1:8000/search/vin/SALLMAMA44A150851
+http://127.0.0.1:8000/search/number/ap9810ex
 
 ```bash
 php artisan search:vin SALLMAMA44A150851
+php artisan search:number Ap9810еХ
 
 
 // Usage description here

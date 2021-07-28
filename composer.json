@@ -24,7 +24,7 @@
     "description": "",
     "require": {
         "php": "^7.3|^8.0",
-        "lorisleiva/laravel-actions": "*",
+        "lorisleiva/laravel-actions": "^v2.15",
         "ext-curl": "*",
         "ext-json": "*"
     }
